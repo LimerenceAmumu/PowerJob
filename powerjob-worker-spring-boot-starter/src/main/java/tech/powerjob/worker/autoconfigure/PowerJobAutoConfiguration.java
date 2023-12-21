@@ -27,7 +27,7 @@ public class PowerJobAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public PowerJobSpringWorker initPowerJob(PowerJobProperties properties) {
-
+        //初始化参数设置
         PowerJobProperties.Worker worker = properties.getWorker();
 
         /*

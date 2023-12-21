@@ -22,6 +22,7 @@ public class StandaloneProcessorDemo implements BasicProcessor {
 
     @Override
     public ProcessResult process(TaskContext context) throws Exception {
+        // PowerJob 在线日志功能，使用该 Logger 打印的日志可以直接在 PowerJob 控制台查看
         OmsLogger omsLogger = context.getOmsLogger();
         omsLogger.info("StandaloneProcessorDemo start process,context is {}.", context);
         omsLogger.info("Notice! If you want this job process failed, your jobParams need to be 'failed'");

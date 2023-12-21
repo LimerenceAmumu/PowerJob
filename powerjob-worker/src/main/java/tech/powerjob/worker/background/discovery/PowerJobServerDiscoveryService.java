@@ -63,6 +63,7 @@ public class PowerJobServerDiscoveryService implements ServerDiscoveryService {
 
     @Override
     public WorkerAppInfo assertApp() {
+        log.info("服务发现 PowerJobServerDiscoveryService.assertApp");
         try {
             return assertApp0();
         } catch (Exception e) {

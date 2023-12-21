@@ -68,7 +68,7 @@ public class PowerJobWorker {
 
         PowerJobWorkerConfig config = workerRuntime.getWorkerConfig();
         CommonUtils.requireNonNull(config, "can't find PowerJobWorkerConfig, please set PowerJobWorkerConfig first");
-
+        //服务发现
         ServerDiscoveryService serverDiscoveryService = new PowerJobServerDiscoveryService(config);
         workerRuntime.setServerDiscoveryService(serverDiscoveryService);
 

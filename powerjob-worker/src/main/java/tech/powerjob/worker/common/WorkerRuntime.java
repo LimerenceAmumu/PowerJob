@@ -13,7 +13,7 @@ import java.util.Optional;
 
 /**
  * store worker's runtime
- *
+ *worker运行时的一些配置信息
  * @author tjq
  * @since 2021/3/7
  */

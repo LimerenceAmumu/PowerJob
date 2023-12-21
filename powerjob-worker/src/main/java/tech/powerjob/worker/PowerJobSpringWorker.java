@@ -1,6 +1,7 @@
 package tech.powerjob.worker;
 
 import com.google.common.collect.Lists;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -22,6 +23,7 @@ import java.util.Optional;
  * @author tjq
  * @since 2023/1/20
  */
+@Slf4j
 public class PowerJobSpringWorker implements ApplicationContextAware, InitializingBean, DisposableBean {
 
     /**
@@ -37,7 +39,9 @@ public class PowerJobSpringWorker implements ApplicationContextAware, Initializi
     @Override
     public void afterPropertiesSet() throws Exception {
         powerJobWorker = new PowerJobWorker(config);
+        log.info("powerJobWorker 初始化开始");
         powerJobWorker.init();
+        log.info("powerJobWorker 初始化结束");
     }
 
     @Override
